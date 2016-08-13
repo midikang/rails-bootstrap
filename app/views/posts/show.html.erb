@@ -2,7 +2,7 @@
 
 <p>
   <strong>Category:</strong>
-  <%= @post.category %>
+  <%= @post.category.name %>
 </p>
 
 <p>
@@ -12,7 +12,7 @@
 
 <p>
   <strong>Content:</strong>
-  <%= @post.content %>
+  <%= raw markdown_parser(@post.content) %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |

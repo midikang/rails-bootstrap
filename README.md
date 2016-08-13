@@ -31,6 +31,10 @@ Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.
 Getting Started
 ---------------
 
+Online demo
+-----------
+[Blog on heroku](https://rails-bootstrap-m.herokuapp.com/)
+
 Documentation and Support
 -------------------------
 

@@ -45,3 +45,7 @@ group :test do
   gem 'launchy'
   gem 'selenium-webdriver'
 end
+
+#markdown
+#gem 'markdown-toolbar', git: 'git@github.com:fxhover/markdown-toolbar.git'
+gem 'redcarpet'
