@@ -25,7 +25,7 @@
                 -->
                 <hr>
                 <p>
-                    <%= raw(markdown_parser(post.content)) %>
+                    <%= raw(markdown_parser(simple_format(post.content))) %>
                 </p>
                 <%= link_to ('Read More <span class="glyphicon glyphicon-chevron-right"></span>').html_safe, post_path(post), :class => "btn btn-primary" %>
 
@@ -115,7 +115,7 @@
             <div class="well">
                 <h4>Blog Categories</h4>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-6">
                         <ul class="list-unstyled">
                             <% @categories.each do |category| %>
                                 <li><%= link_to category.name, category_path(category) %></li>
