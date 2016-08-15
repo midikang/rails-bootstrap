@@ -10,6 +10,12 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @post.visit_count += 1
+    if @post.save
+      puts 'visit_count ++'
+    else
+      puts 'error happens while increase visit_count'
+    end
   end
 
   # GET /posts/new
