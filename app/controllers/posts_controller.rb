@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   # GET /posts/1.json
   def show
     @post.visit_count += 1
+    # todo: increase category.visit_count while visit one post
     if @post.save
       puts 'visit_count ++'
     else
