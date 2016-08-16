@@ -37,18 +37,13 @@ Online demo
 
 Documentation and Support
 -------------------------
+[Devise](http://devise.plataformatec.com.br)
 
-Issues
--------------
 
-Similar Projects
+Devise generator
 ----------------
-
-Contributing
-------------
-
-Credits
--------
-
-License
--------
+Devise:
+  devise
+  devise:controllers
+  devise:install
+  devise:views

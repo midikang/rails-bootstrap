@@ -1,3 +1,36 @@
+### 2016-08-16
+
+* add devise 4.2.0
+  * add gem in Gemfile with: and run bundle install
+    ```
+      gem 'devise', '4.2.0'
+    ```
+  * Run the bundle command to install it.
+    ```
+      bundle install
+    ```
+  * Run the generator
+    ```
+      rails generate devise:install
+    ```
+  *  add configuration in config/environments/development.rb
+    ```
+        config.action_mailer.default_url_options = { host: 'localhost', port: 8080 }
+    ```
+  * generate user model
+    ```
+      rails generate devise user
+    ```
+  * generate devise views
+    ```
+      rails generate devise:views
+    ```
+  * create admin user in seed.rb and seed it
+    ```
+      user = CreateAdminService.new.call
+      puts 'CREATED ADMIN USER: ' << user.email
+    ```
+
 ### 2016-08-15
 
 * show 3 most read posts on index

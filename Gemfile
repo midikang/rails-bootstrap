@@ -48,4 +48,6 @@ end
 
 #markdown
 #gem 'markdown-toolbar', git: 'git@github.com:fxhover/markdown-toolbar.git'
-gem 'redcarpet'
+gem 'redcarpet','3.3.4'
+
+gem 'devise', '4.2.0'
