@@ -20,12 +20,12 @@
                     by <%= link_to 'Midi Kang', root_path %>
                 </p>
                 <p><span class="glyphicon glyphicon-time"></span> Posted on <%= post.created_at.strftime('%b %d, %Y') %> | Read:<%= post.visit_count%> </p>
-
-                <hr><!--
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-                -->
+<!--
                 <hr>
+                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
 
+                <hr>
+-->
                 <p>
                     <%= truncate(simple_format(post.content), length: 100, omission: '... (continued)')%>
                     <%#= raw(markdown_parser(simple_format(post.content))) %>
@@ -112,16 +112,7 @@
 
     <hr>
 
-    <!-- Footer -->
-    <footer>
-        <div class="row">
-            <div class="col-lg-12">
-                <p>Copyright &copy; Midi Kang 2016</p>
-            </div>
-            <!-- /.col-lg-12 -->
-        </div>
-        <!-- /.row -->
-    </footer>
+
 
 </div>
 <!-- /.container -->
