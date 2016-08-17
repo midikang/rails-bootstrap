@@ -2,6 +2,17 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:create, :update, :destroy]
 
+  def search
+    keyword =params[:keyword]
+    puts keyword
+    @posts = Post.where("title like ?", "%#{params[:keyword]}%") if params[:keyword].present?
+    if @posts.size >0
+      render 'index'
+    else
+      redirect_to root_path, notice: 'No record found!'
+    end
+  end
+
   # GET /posts
   # GET /posts.json
   def index
