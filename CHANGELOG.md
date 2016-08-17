@@ -1,3 +1,19 @@
+### 2016-08-17
+
+* polish ui via bootstrap style
+  * add bootstrap style 'table table-striped' to posts and categories
+    ```
+      <table class="table table-striped">
+    ```
+  * truncate post.content on index page
+    ```
+      <%= truncate(simple_format(post.content), length: 100, omission: '... (continued)')%>
+    ```
+  * add bootstrap style 'btn btn-primary' to posts
+    ```
+      <td><%= link_to 'Edit', edit_post_path(post), :class => 'btn btn-primary' %></td>
+    ```
+
 ### 2016-08-16
 
 * add devise 4.2.0
