@@ -12,8 +12,8 @@
 
 <p>
   <strong>Content:</strong>
-  <%= raw markdown_parser(@post.content) %>
+  <%= simple_format(@post.content) %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Edit', edit_post_path(@post), class:'btn btn-primary'  %>
+<%= link_to 'Back', posts_path, class:'btn btn-primary'  %>
