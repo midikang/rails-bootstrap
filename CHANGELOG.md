@@ -1,3 +1,11 @@
+### 2016-08-21
+
+* add badge
+  * add badge to index and posts page
+    ```
+      Read:<span class="badge"><%= post.visit_count%></span>
+    ```
+
 ### 2016-08-17
 
 * polish ui via bootstrap style

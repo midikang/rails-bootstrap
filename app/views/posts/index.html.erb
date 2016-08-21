@@ -19,7 +19,7 @@
         <td><%= post.category.name %></td>
         <td><%= link_to post.title, post %></td>
         <td><%= truncate(simple_format(post.content), length: 100, omission: '... ') { link_to "Details", post }%></td>
-        <td><%= post.visit_count %></td>
+        <td><span class="badge"><%= post.visit_count %></span></td>
         <td><%= link_to 'Edit', edit_post_path(post), :class => 'btn btn-primary' %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-primary btn-danger'%></td>
       </tr>
