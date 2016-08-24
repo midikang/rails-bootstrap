@@ -16,7 +16,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.order(visit_count: :desc)
+    @posts = Post.order(visit_count: :desc, updated_at: :desc)
   end
 
   # GET /posts/1

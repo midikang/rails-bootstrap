@@ -12,26 +12,30 @@
     <header>
       <%= render 'layouts/navigation' %>
     </header>
+
     <main role="main">
-       <%= render 'layouts/messages' %>
-       <%= yield %>
-    </main>
-    <footer class=bs-docs-footer>
-      <div class=container>
-        <ul class=bs-docs-footer-links>
-            <li>
-                <a href=https://github.com/midikang/rails-bootstrap target=_blank>GitHub</a>
-            </li>
-            <li>
-                <a href=https://twitter.com/midi13 target=_blank>Twitter</a>
-            </li>
-            <li>
-                <a href="http://getbootstrap.com/getting-started/#examples" target=_blank>Bootstrap Examples</a>
-            </li>
-        </ul>
-        <p>Copyright &copy; Midi Kang 2016</p>
-        <p>Built with all the love in the world by <a href=https://twitter.com/midi13 target=_blank>@midi13</a>.</p>
+      <%= render 'layouts/messages' %>
+
+      <!-- Page Content -->
+      <div class="container">
+        <div class="row">
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+              <%= yield %>
+            </div>
+
+            <div class="col-md-4">
+              <%= render 'shared/side_bar' %>
+            </div>
+        </div>
+        <!-- /.row -->
+        <hr>
       </div>
+      <!-- /.container -->
+    </main>
+
+    <footer class=bs-docs-footer>
+      <%= render 'shared/footer' %>
     </footer>
   </body>
 </html>
