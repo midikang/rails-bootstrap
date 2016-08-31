@@ -1,3 +1,13 @@
+### 2016-08-31
+
+* show 'new post', 'new category' only if logined
+  ```
+    <% if user_signed_in? %>
+      <li><%= link_to 'New Post', new_post_path %></li>
+      <li><%= link_to 'New Category', new_category_path %></li>
+    <% end %>
+  ```
+
 ### 2016-08-21
 
 * add badge
