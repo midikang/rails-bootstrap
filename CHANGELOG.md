@@ -1,3 +1,13 @@
+### 2016-09-01
+
+* show category list order by name for 'new post'
+  ```
+     <%= f.association :category, collection: Category.order('name'), as: :radio_buttons %>
+  ```
+  tips:
+  <%= f.association :category, as: :radio_buttons %>
+  <%= f.association :category, as: :check_boxes %>
+*
 ### 2016-08-31
 
 * show 'new post', 'new category' only if logined
