@@ -7,6 +7,7 @@
     <tr>
       <th>Name</th>
       <th>Description</th>
+      <th>Posts</th>
       <th colspan="2"></th>
     </tr>
   </thead>
@@ -16,6 +17,13 @@
       <tr>
         <td><%= category.name %></td>
         <td><%= category.description %></td>
+        <td>
+        <% category.posts.each do |p| %>
+          <p>
+            <%= link_to p.title, post_path(p) %><br>
+          </p>
+        <% end %>
+        </td>
         <% if user_signed_in? %>
           <td><%= link_to 'Edit', edit_category_path(category), class:'btn btn-primary' %></td>
           <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } , class: 'btn btn-primary btn-danger' %></td>
