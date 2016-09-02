@@ -1,19 +1,29 @@
+<!-- Blog Post -->
+<!-- inside div col-md-8 -->
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @post.category.name %>
-</p>
 
-<p>
-  <strong>Title:</strong>
+<h1>
   <%= @post.title %>
+</h1>
+
+<!-- Author -->
+<p class="lead">
+  by <%= link_to 'Midi Kang', root_path %>
 </p>
 
-<p>
-  <strong>Content:</strong>
+<hr>
+
+<!-- Date/Time -->
+<p><span class="glyphicon glyphicon-time"></span> Posted on <%= @post.created_at.strftime('%b %d, %Y') %> |  Read:<span class="badge"><%= @post.visit_count%></span> </p>
+
+<hr>
+
+<p class="lead">
   <%= simple_format(@post.content) %>
 </p>
+
+<hr>
 
 <p>
   <strong>Source:</strong>
