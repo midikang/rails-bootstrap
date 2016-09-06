@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+/* Add by Midi */
+/* apply dotted border for category list in sidebar*/
+.list-inline > li {
+   border-bottom: 1px dotted #595;
+}
