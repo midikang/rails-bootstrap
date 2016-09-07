@@ -1,50 +1,32 @@
-<!-- Page Content -->
-<div class="container">
-    <div class="row">
-        <!-- Blog Entries Column -->
-        <div class="col-md-8">
-            <h1 class="page-header">Recent update<small> </small></h1>
-            <!-- Recent Blog Posts -->
-            <% @posts.each do |post| %>
-                <h2>
-                    <%= link_to post.title, post_path(post) %>
-                </h2>
-                 <p class="lead">
-                    by <%= link_to 'Midi Kang', root_path %>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span> Posted on <%= post.created_at.strftime('%b %d, %Y') %> | Read:<span class="badge"><%= post.visit_count%></span> </p>
-                <!--
-                <hr>
-                <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-                <hr>
-                -->
-                <p>
-                    <%= truncate(simple_format(post.content), length: 500, omission: '... (continued)')%>
-                    <%#= raw(markdown_parser(simple_format(post.content))) %>
-                </p>
-                <%= link_to ('Read More <span class="glyphicon glyphicon-chevron-right"></span>').html_safe, post_path(post), :class => "btn btn-primary" %>
-                <hr>
-            <% end %>
-
-            <!-- Pager -->
-            <ul class="pager">
-                <li class="previous">
-                    <a href="#">&larr; Older</a>
-                </li>
-                <li class="next">
-                    <a href="#">Newer &rarr;</a>
-                </li>
-            </ul>
-
-        </div>
-
-        <!-- Blog Sidebar Widgets Column -->
-        <div class="col-md-4">
-            <%= render 'shared/side_bar' %>
-        </div>
-
-    </div>
-    <!-- /.row -->
+<h1 class="page-header">Recent update<small> </small></h1>
+<!-- Recent Blog Posts -->
+<% @posts.each do |post| %>
+    <h2>
+        <%= link_to post.title, post_path(post) %>
+    </h2>
+     <p class="lead">
+        by <%= link_to 'Midi Kang', root_path %>
+    </p>
+    <p><span class="glyphicon glyphicon-time"></span> Posted on <%= post.created_at.strftime('%b %d, %Y') %> | Read:<span class="badge"><%= post.visit_count%></span> </p>
+    <!--
     <hr>
-</div>
-<!-- /.container -->
+    <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+    <hr>
+    -->
+    <p>
+        <%= truncate(simple_format(post.content), length: 500, omission: '... (continued)')%>
+        <%#= raw(markdown_parser(simple_format(post.content))) %>
+    </p>
+    <%= link_to ('Read More <span class="glyphicon glyphicon-chevron-right"></span>').html_safe, post_path(post), :class => "btn btn-primary" %>
+    <hr>
+<% end %>
+
+<!-- Pager -->
+<ul class="pager">
+    <li class="previous">
+        <a href="#">&larr; Older</a>
+    </li>
+    <li class="next">
+        <a href="#">Newer &rarr;</a>
+    </li>
+</ul>
