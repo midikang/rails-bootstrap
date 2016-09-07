@@ -3,7 +3,7 @@
     <div class="row">
         <!-- Blog Entries Column -->
         <div class="col-md-8">
-            <h1 class="page-header">Recent posts<small>Top 3 posts</small></h1>
+            <h1 class="page-header">Recent update<small> </small></h1>
             <!-- Recent Blog Posts -->
             <% @posts.each do |post| %>
                 <h2>
@@ -19,7 +19,7 @@
                 <hr>
                 -->
                 <p>
-                    <%= truncate(simple_format(post.content), length: 100, omission: '... (continued)')%>
+                    <%= truncate(simple_format(post.content), length: 500, omission: '... (continued)')%>
                     <%#= raw(markdown_parser(simple_format(post.content))) %>
                 </p>
                 <%= link_to ('Read More <span class="glyphicon glyphicon-chevron-right"></span>').html_safe, post_path(post), :class => "btn btn-primary" %>
